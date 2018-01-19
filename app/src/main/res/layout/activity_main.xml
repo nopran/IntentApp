@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.razor.intentapp.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtbrowser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masukkan Link" />
+
+            <EditText
+                android:id="@+id/edtbrowser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtbrowser" />
+
+            <Button
+                android:id="@+id/btnbrowser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtbrowser"
+                android:onClick="openlink"
+                android:text="Go To Link" />
+
+            <TextView
+                android:id="@+id/txttextshare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnbrowser"
+                android:text="Share Text" />
+
+            <EditText
+                android:id="@+id/edtTextShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txttextshare"
+                android:onClick="phonecall" />
+
+            <Button
+                android:id="@+id/btntxtshare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtTextShare"
+                android:onClick="txtshare"
+                android:text="Share Text" />
+
+            <TextView
+                android:id="@+id/txtphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btntxtshare"
+                android:text="Masukkan Nomor HP" />
+
+            <EditText
+                android:id="@+id/edtphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtphone" />
+
+            <Button
+                android:id="@+id/btncall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtphone"
+                android:onClick="phonecall"
+                android:text="Call" />
+
+            <TextView
+                android:id="@+id/txtsms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btncall"
+                android:text="Masukkan Pesan" />
+
+            <EditText
+                android:id="@+id/edtsms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtsms" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/edtsms"
+                android:onClick="sendSMS"
+                android:text="Send SMS" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
